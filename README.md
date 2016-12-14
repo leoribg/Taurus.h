@@ -1,7 +1,7 @@
 # Taurus.h
 Taurus library for ESP8266
 
-### API DOCUMENTATION
+### BRIEF DOCUMENTATION
 
 Create an instance for Taurus:
 
