@@ -45,5 +45,6 @@ int data = taurus.read_sensor(char *sensorID);
 ```
 
 By: Leonardo Gonçalves
-[![N|Solid](https://www.dropbox.com/s/cphr0rp35lh8vio/Taurus_67x49.png?dl=0)](https://taurussystem.com)
+
+[![N|Solid](http://104.131.189.228/assets/taurus/images/pic02.png)](https://taurussystem.com)
 
