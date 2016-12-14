@@ -43,8 +43,3 @@ Read data of a sensor:
 ```sh
 int data = taurus.read_sensor(char *sensorID);
 ```
-
-By: Leonardo Gonçalves
-
-[![N|Solid](http://104.131.189.228/assets/taurus/images/pic02.png)](https://taurussystem.com)
-
