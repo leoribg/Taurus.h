@@ -12,7 +12,7 @@ taurus taurus("TAURUS_SERIAL");
 Write value in a digital actuator:
 
 ```sh
-taurus.write_dActuator(char *actID, char *value);
+taurus.write_dActuator(char *actID, uint8_t value);
 ```
 
 Read value of a digital actuator:
@@ -23,7 +23,7 @@ int data = taurus.read_dActuator(char *actID);
 Write value in a analog actuator:
 
 ```sh
-taurus.write_aActuator(char *actID, char *value);
+taurus.write_aActuator(char *actID, uint8_t value);
 ```
 
 Read value of a analog actuator:
@@ -35,7 +35,7 @@ int data = taurus.read_aActuator(char *actID);
 Write data in a sensor:
 
 ```sh
-taurus.write_sensor(char *actID, char *value);
+taurus.write_sensor(char *sensorID, uint8_t value);
 ```
 
 Read data of a sensor:

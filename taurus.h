@@ -12,11 +12,11 @@ class taurus
 {
   public:
     taurus(char *serial);
-    void write_dActuator(char *actID, char *value);
+    void write_dActuator(char *actID, uint8_t value);
     int  read_dActuator(char *actID);
-    void write_aActuator(char *actID, char *value);
+    void write_aActuator(char *actID, uint8_t value);
     int  read_aActuator(char *actID);
-    void write_sensor(char *actID, char *value);
+    void write_sensor(char *actID, uint8_t value);
     int  read_sensor(char *sensorID);
   private:
     int _pin;

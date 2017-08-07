@@ -19,7 +19,7 @@ taurus::taurus(char *serial)
   _serial = serial;
 }
 
-void taurus::write_dActuator(char *actID, char *value)
+void taurus::write_dActuator(char *actID, uint8_t value)
 {
   if (!client.connect(host, httpPort)) 
   {
@@ -27,7 +27,7 @@ void taurus::write_dActuator(char *actID, char *value)
     return;
   }
   char buffer[128];
-  sprintf(buffer, "GET /ws/webresources/Digital/set?key=%s&actuator=%s&value=%s HTTP/1.1", _serial, actID, value);
+  sprintf(buffer, "GET /ws/webresources/Digital/set?key=%s&actuator=%s&value=%d HTTP/1.1", _serial, actID, value);
   //Serial.println(buffer);
   client.println(buffer);
   client.println("Host: taurussystem.com");
@@ -83,7 +83,7 @@ int taurus::read_dActuator(char *actID)
   }
 }
 
-void taurus::write_aActuator(char *actID, char *value)
+void taurus::write_aActuator(char *actID, uint8_t value)
 {
   if (!client.connect(host, httpPort)) 
     {
@@ -92,7 +92,7 @@ void taurus::write_aActuator(char *actID, char *value)
     }
 
     char buffer[128];
-    sprintf(buffer, "GET /ws/webresources/Analog/set?key=%s&actuator=%s&value=%s HTTP/1.1", _serial, actID, value);
+    sprintf(buffer, "GET /ws/webresources/Analog/set?key=%s&actuator=%s&value=%d HTTP/1.1", _serial, actID, value);
     //Serial.println(buffer);
     client.println(buffer);
     client.println("Host: taurussystem.com");
@@ -141,7 +141,7 @@ int taurus::read_aActuator(char *actID)
   }
 }
 
-void taurus::write_sensor(char *actID, char *value)
+void taurus::write_sensor(char *actID, uint8_t value)
 {
   if (!client.connect(host, httpPort)) 
     {
@@ -150,7 +150,7 @@ void taurus::write_sensor(char *actID, char *value)
     }
     char buffer[128];
     int i=0;
-    sprintf(buffer, "GET /ws/webresources/Sensor/set?key=%s&sensor=%s&value=%s HTTP/1.1", _serial, actID, value);
+    sprintf(buffer, "GET /ws/webresources/Sensor/set?key=%s&sensor=%s&value=%d HTTP/1.1", _serial, actID, value);
     //Serial.println(buffer);
     client.println(buffer);
     client.println("Host: taurussystem.com");
